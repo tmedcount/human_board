@@ -2,14 +2,17 @@ package com.human.app;
 
 public class BBSrec {
 	private int bbs_id;
+	private String passcode;
 	private String title;
 	private String content;
 	private String writer;
 	private String created;
 	private String updated;
 	
-	public BBSrec(int bbs_id, String title, String content, String writer, String created, String updated) {
+	public BBSrec(int bbs_id, String passcode, String title, String content, String writer, String created,
+			String updated) {
 		this.bbs_id = bbs_id;
+		this.passcode = passcode;
 		this.title = title;
 		this.content = content;
 		this.writer = writer;
@@ -26,6 +29,14 @@ public class BBSrec {
 
 	public void setBbs_id(int bbs_id) {
 		this.bbs_id = bbs_id;
+	}
+
+	public String getPasscode() {
+		return passcode;
+	}
+
+	public void setPasscode(String passcode) {
+		this.passcode = passcode;
 	}
 
 	public String getTitle() {
@@ -67,7 +78,6 @@ public class BBSrec {
 	public void setUpdated(String updated) {
 		this.updated = updated;
 	}
-	
 	
 	
 }

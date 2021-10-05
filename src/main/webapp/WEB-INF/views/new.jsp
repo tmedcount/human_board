@@ -5,6 +5,7 @@ prefix="c" %>
 <html>
   <head>
     <meta charset="UTF-8" />
+    <script src="http://code.jquery.com/jquery-3.5.0.js"></script>
     <title>새 글쓰기</title>
   </head>
   <body>
@@ -29,10 +30,16 @@ prefix="c" %>
         <tr>
           <td colspan="2">
             <input type="submit" value="글 등록" />&nbsp;
-            <input type="button" value="취소(목록보기)" />
+            <input type="button" id="btnCancel" value="취소(목록보기)" />
           </td>
         </tr>
       </table>
     </form>
   </body>
+  <script>
+    $(document)
+    .on("click", "#btnCancel", function() {
+    	document.location = "/app/list";
+    })
+  </script>
 </html>
